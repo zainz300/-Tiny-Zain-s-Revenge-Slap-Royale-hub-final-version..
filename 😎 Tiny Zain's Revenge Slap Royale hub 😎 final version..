@@ -1,0 +1,1558 @@
+-- -- Tiny Zain's Revenge 😎 Slap Royale Hub -- Updated Hub
+local _0x1 = game:GetService("Players")
+local _0x2 = game:GetService("ReplicatedStorage")
+local _0x3 = game:GetService("CoreGui")
+local _0x4 = game:GetService("UserInputService")
+local _0x5 = game:GetService("VirtualInputManager")
+local _0x6 = game:GetService("RunService")
+local _0x7 = game:GetService("CollectionService")
+local _0x8 = game:GetService("TweenService")
+local _0x9 = _0x1.LocalPlayer
+
+task.spawn(function()
+  pcall(function()
+    _0x2:WaitForChild("_NETWORK"):WaitForChild("{725da1fc-d512-4e08-bcb4-39bc06317776}"):FireServer("Lag")
+  end)
+end)
+
+if _0x3:FindFirstChild("SlapBattlesHub") then
+  _0x3.SlapBattlesHub:Destroy()
+end
+
+local _0x10 = Instance.new("ScreenGui")
+_0x10.Name = "SlapBattlesHub"
+_0x10.ResetOnSpawn = false
+_0x10.Parent = _0x3
+
+local _0x11 = Instance.new("TextButton")
+_0x11.Size = UDim2.new(0, 55, 0, 55)
+_0x11.Position = UDim2.new(0.02, 0, 0.3, 0)
+_0x11.BackgroundColor3 = Color3.fromRGB(15, 15, 25)
+_0x11.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x11.TextSize = 26
+_0x11.Text = "😎" 
+_0x11.Parent = _0x10
+
+local _0x12 = Instance.new("UICorner")
+_0x12.CornerRadius = UDim.new(1, 0)
+_0x12.Parent = _0x11
+
+local _0x13 = Instance.new("UIStroke")
+_0x13.Color = Color3.fromRGB(0, 255, 200)
+_0x13.Thickness = 2.5
+_0x13.Parent = _0x11
+
+task.spawn(function()
+  while true do
+    for i = 2.5, 4, 0.1 do
+      _0x13.Thickness = i
+      task.wait(0.08)
+    end
+    for j = 4, 2.5, -0.1 do
+      _0x13.Thickness = j
+      task.wait(0.08)
+    end
+  end
+end)
+
+local _0x14 = Instance.new("Frame")
+_0x14.Size = UDim2.new(0, 280, 0, 480)
+_0x14.Position = UDim2.new(0.1, 0, 0.1, 0)
+_0x14.BackgroundColor3 = Color3.fromRGB(10, 10, 15)
+_0x14.BorderSizePixel = 0
+_0x14.ClipsDescendants = false
+_0x14.Visible = false
+_0x14.Parent = _0x10
+
+local _0x15 = Instance.new("UICorner")
+_0x15.CornerRadius = UDim.new(0, 12)
+_0x15.Parent = _0x14
+
+local _0x16 = Instance.new("UIStroke")
+_0x16.Color = Color3.fromRGB(138, 43, 226)
+_0x16.Thickness = 3
+_0x16.Parent = _0x14
+
+local _0x17 = Instance.new("UIGradient")
+_0x17.Color = ColorSequence.new({
+  ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 10, 40)),
+  ColorSequenceKeypoint.new(0.5, Color3.fromRGB(10, 30, 45)),
+  ColorSequenceKeypoint.new(1, Color3.fromRGB(40, 10, 25)),
+})
+_0x17.Rotation = 45
+_0x17.Parent = _0x14
+
+local _0x18 = Instance.new("TextButton")
+_0x18.Size = UDim2.new(0, 18, 0, 18)
+_0x18.Position = UDim2.new(1, -18, 1, -18)
+_0x18.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+_0x18.Text = "◢"
+_0x18.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x18.TextSize = 10
+_0x18.ZIndex = 50
+_0x18.Parent = _0x14
+
+Instance.new("UICorner", _0x18).CornerRadius = UDim.new(0, 4)
+
+local _0x19 = false
+local _0x1a, _0x1b
+
+_0x18.InputBegan:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0x19 = true
+    _0x1a = _0x1c.Position
+    _0x1b = _0x14.AbsoluteSize
+  end
+end)
+
+_0x4.InputEnded:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0x19 = false
+  end
+end)
+
+_0x4.InputChanged:Connect(function(_0x1c)
+  if _0x19 and (_0x1c.UserInputType == Enum.UserInputType.MouseMovement or _0x1c.UserInputType == Enum.UserInputType.Touch) then
+    local _0x1d = _0x1c.Position - _0x1a
+    local _0x1e = math.clamp(_0x1b.X + _0x1d.X, 220, 500)
+    local _0x1f = math.clamp(_0x1b.Y + _0x1d.Y, 250, 700)
+    _0x14.Size = UDim2.new(0, _0x1e, 0, _0x1f)
+  end
+end)
+
+local _0x20 = Instance.new("TextLabel")
+_0x20.Size = UDim2.new(1, 0, 0, 35)
+_0x20.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
+_0x20.BackgroundTransparency = 0.4
+_0x20.TextColor3 = Color3.fromRGB(0, 255, 200)
+_0x20.Text = "😎 Tiny Zain's Revenge Slap Royale Hub 😎" 
+_0x20.TextSize = 11
+_0x20.Font = Enum.Font.SourceSansBold
+_0x20.ZIndex = 2
+_0x20.Parent = _0x14
+
+Instance.new("UICorner", _0x20).CornerRadius = UDim.new(0, 10)
+
+_0x11.MouseButton1Click:Connect(function() _0x14.Visible = not _0x14.Visible end)
+
+local _0x21 = Instance.new("ScrollingFrame")
+_0x21.Size = UDim2.new(1, 0, 1, -35)
+_0x21.Position = UDim2.new(0, 0, 0, 35)
+_0x21.BackgroundTransparency = 1
+_0x21.BorderSizePixel = 0
+_0x21.CanvasSize = UDim2.new(0, 0, 0, 0)
+_0x21.AutomaticCanvasSize = Enum.AutomaticSize.Y
+_0x21.ScrollBarThickness = 6
+_0x21.Parent = _0x14
+
+local _0x22 = Instance.new("UIListLayout")
+_0x22.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_0x22.SortOrder = Enum.SortOrder.LayoutOrder
+_0x22.Padding = UDim.new(0, 5)
+_0x22.Parent = _0x21
+
+local _0x23 = Instance.new("UIPadding")
+_0x23.PaddingTop = UDim.new(0, 8)
+_0x23.PaddingBottom = UDim.new(0, 10)
+_0x23.Parent = _0x21
+
+local _0x24 = 0
+local function _0x25(_0x26, _0x27)
+  _0x24 = _0x24 + 1
+  local _0x28 = Instance.new("TextButton")
+  _0x28.Size = UDim2.new(0.9, 0, 0, 26)
+  _0x28.BackgroundColor3 = _0x27 or Color3.fromRGB(120, 30, 30)
+  _0x28.TextColor3 = Color3.fromRGB(255, 255, 255)
+  _0x28.Text = _0x26
+  _0x28.TextSize = 11
+  _0x28.Font = Enum.Font.SourceSansBold
+  _0x28.LayoutOrder = _0x24
+  _0x28.Parent = _0x21
+  Instance.new("UICorner", _0x28).CornerRadius = UDim.new(0, 8)
+  return _0x28
+end
+
+-- 1. 1s Slap Aura (0 Hitboxes)
+local _0xSA1s = _0x25("1S SLAP AURA (0 HITBOXES) 👥: OFF", Color3.fromRGB(120, 30, 30))
+local _0xSA1sActive = false
+_0xSA1s.MouseButton1Click:Connect(function()
+  _0xSA1sActive = not _0xSA1sActive
+  if _0xSA1sActive then
+    _0xSA1s.Text = "1S SLAP AURA (0 HITBOXES) 👥: ON"
+    _0xSA1s.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0xSA1s.Text = "1S SLAP AURA (0 HITBOXES) 👥: OFF"
+    _0xSA1s.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- Disclaimer Label for 1s Slap Aura
+_0x24 = _0x24 + 1
+local _0xDisclaimer = Instance.new("TextLabel")
+_0xDisclaimer.Size = UDim2.new(0.9, 0, 0, 35)
+_0xDisclaimer.BackgroundTransparency = 1
+_0xDisclaimer.TextColor3 = Color3.fromRGB(255, 100, 100)
+_0xDisclaimer.Text = "⚠️ Do not enable hitbox expander when using 1s Slap Aura cause without hitbox expander it will do 0 kicks"
+_0xDisclaimer.TextSize = 9.5
+_0xDisclaimer.TextWrapped = true
+_0xDisclaimer.Font = Enum.Font.SourceSansBold
+_0xDisclaimer.LayoutOrder = _0x24
+_0xDisclaimer.Parent = _0x21
+
+local _0x2b = {}
+local _0x2c = {}
+local _0x2d = {}
+
+-- 2. Players ESP
+local _0x2e = _0x25("PLAYERS ESP 👁️: OFF", Color3.fromRGB(120, 30, 30))
+local _0x2f = false
+_0x2e.MouseButton1Click:Connect(function()
+  _0x2f = not _0x2f
+  if _0x2f then
+    _0x2e.Text = "PLAYERS ESP 👁️: ON"
+    _0x2e.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x2e.Text = "PLAYERS ESP 👁️: OFF"
+    _0x2e.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+    for _0x30, _0x31 in pairs(_0x2b) do
+      if _0x31 then _0x31:Destroy() end
+      _0x2b[_0x30] = nil
+    end
+  end
+end)
+
+-- 3. Items ESP
+local _0x32 = _0x25("ITEMS ESP 📦: OFF", Color3.fromRGB(120, 30, 30))
+local _0x33 = false
+_0x32.MouseButton1Click:Connect(function()
+  _0x33 = not _0x33
+  if _0x33 then
+    _0x32.Text = "ITEMS ESP 📦: ON"
+    _0x32.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x32.Text = "ITEMS ESP 📦: OFF"
+    _0x32.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+    for _0x34, _0x31 in pairs(_0x2c) do
+      if _0x31 then _0x31:Destroy() end
+      _0x2c[_0x34] = nil
+    end
+  end
+end)
+
+-- 4. Select Dropdown Menu
+local _0x35 = {
+  "Apple", "Bandage", "Bomb", "Bull's Essence", "Frog Potion", "Boba", "Speed Potion",
+  "True Power", "Tomahawk", "Force Field Crystal", "Sphere of Fury", "Medkit",
+  "Lightning Potion", "Healing Potion", "Strength Potion", "Cube of Ice",
+}
+
+local _0x36 = _0x25("SELECT: Apple ▾", Color3.fromRGB(40, 40, 60))
+
+local _0x37 = Instance.new("ScrollingFrame")
+_0x37.Size = UDim2.new(0.9, 0, 0, 110)
+_0x37.BackgroundColor3 = Color3.fromRGB(15, 15, 25)
+_0x37.BorderSizePixel = 0
+_0x37.Visible = false
+_0x37.ZIndex = 25
+_0x37.CanvasSize = UDim2.new(0, 0, 0, #_0x35 * 26)
+_0x37.LayoutOrder = _0x24
+_0x37.ScrollBarThickness = 4
+_0x37.Parent = _0x21
+
+Instance.new("UICorner", _0x37).CornerRadius = UDim.new(0, 8)
+Instance.new("UIStroke", _0x37).Color = Color3.fromRGB(138, 43, 226)
+
+for _0x38, _0x39 in ipairs(_0x35) do
+  local _0x3a = _0x39
+  local _0x3b = Instance.new("TextButton")
+  _0x3b.Size = UDim2.new(1, 0, 0, 26)
+  _0x3b.Position = UDim2.new(0, 0, 0, (_0x38 - 1) * 26)
+  _0x3b.BackgroundTransparency = 0.5
+  _0x3b.BackgroundColor3 = Color3.fromRGB(30, 30, 45)
+  _0x3b.TextColor3 = Color3.fromRGB(255, 255, 255)
+  _0x3b.Text = _0x3a
+  _0x3b.TextSize = 11
+  _0x3b.Font = Enum.Font.SourceSans
+  _0x3b.ZIndex = 26
+  _0x3b.Parent = _0x37
+
+  _0x3b.MouseButton1Click:Connect(function()
+    _0x36.Text = "SELECT: " .. _0x3a .. " ▾"
+    _0x37.Visible = false
+  end)
+end
+
+_0x36.MouseButton1Click:Connect(function()
+  _0x37.Visible = not _0x37.Visible
+end)
+
+-- 5. Auto Collect
+local _0x3c = _0x25("AUTO COLLECT 📦: OFF", Color3.fromRGB(120, 30, 30))
+local _0x3d = false
+_0x3c.MouseButton1Click:Connect(function()
+  _0x3d = not _0x3d
+  if _0x3d then
+    _0x3c.Text = "AUTO COLLECT 📦: ON"
+    _0x3c.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x3c.Text = "AUTO COLLECT 📦: OFF"
+    _0x3c.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 6. Hitbox Expander Container & Slider (1-20 Range)
+_0x24 = _0x24 + 1
+local _0x3e = Instance.new("Frame")
+_0x3e.Size = UDim2.new(0.9, 0, 0, 52)
+_0x3e.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+_0x3e.BorderSizePixel = 0
+_0x3e.LayoutOrder = _0x24
+_0x3e.Parent = _0x21
+Instance.new("UICorner", _0x3e).CornerRadius = UDim.new(0, 8)
+Instance.new("UIStroke", _0x3e).Color = Color3.fromRGB(138, 43, 226)
+
+local _0x3f = Instance.new("TextButton")
+_0x3f.Size = UDim2.new(1, 0, 0, 24)
+_0x3f.BackgroundTransparency = 1
+_0x3f.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x3f.Text = "HITBOX EXPANDER 📏: OFF"
+_0x3f.TextSize = 11
+_0x3f.Font = Enum.Font.SourceSansBold
+_0x3f.Parent = _0x3e
+
+local _0x40 = Instance.new("Frame")
+_0x40.Size = UDim2.new(0.9, 0, 0, 16)
+_0x40.Position = UDim2.new(0.05, 0, 0, 28)
+_0x40.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
+_0x40.BorderSizePixel = 0
+_0x40.Parent = _0x3e
+Instance.new("UICorner", _0x40).CornerRadius = UDim.new(0, 4)
+
+local _0x41 = Instance.new("Frame")
+_0x41.Size = UDim2.new(0, 0, 1, 0)
+_0x41.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+_0x41.BorderSizePixel = 0
+_0x41.Parent = _0x40
+Instance.new("UICorner", _0x41).CornerRadius = UDim.new(0, 4)
+
+local _0x42 = Instance.new("TextLabel")
+_0x42.Size = UDim2.new(1, 0, 1, 0)
+_0x42.BackgroundTransparency = 1
+_0x42.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x42.Text = "Size: 1"
+_0x42.TextSize = 10
+_0x42.Font = Enum.Font.SourceSansBold
+_0x42.Parent = _0x40
+
+local _0x43 = false
+local globalHRPSize = 1
+local hrpGlobalSliderUsed = false
+
+_0x3f.MouseButton1Click:Connect(function()
+  _0x43 = not _0x43
+  hrpGlobalSliderUsed = _0x43
+  if _0x43 then
+    _0x3f.Text = "HITBOX EXPANDER 📏: ON"
+    _0x3e.BackgroundColor3 = Color3.fromRGB(20, 80, 40)
+  else
+    _0x3f.Text = "HITBOX EXPANDER 📏: OFF"
+    _0x3e.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+    for _, _0x45 in ipairs(_0x1:GetPlayers()) do
+      if _0x45 ~= _0x9 and _0x45.Character and _0x45.Character:FindFirstChild("HumanoidRootPart") then
+        local _0x46 = _0x45.Character.HumanoidRootPart
+        _0x46.Size = Vector3.new(2, 2, 1)
+        _0x46.Transparency = 1
+        _0x46.CanCollide = false
+      end
+    end
+  end
+end)
+
+local _0x47 = false
+_0x40.InputBegan:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0x47 = true
+  end
+end)
+
+_0x4.InputEnded:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0x47 = false
+  end
+end)
+
+_0x4.InputChanged:Connect(function(_0x1c)
+  if _0x47 and (_0x1c.UserInputType == Enum.UserInputType.MouseMovement or _0x1c.UserInputType == Enum.UserInputType.Touch) then
+    local _0x48 = _0x40.AbsolutePosition.X
+    local _0x49 = _0x40.AbsoluteSize.X
+    local _0x4a = _0x1c.Position.X
+    local _0x4b = math.clamp((_0x4a - _0x48) / _0x49, 0, 1)
+    
+    _0x41.Size = UDim2.new(_0x4b, 0, 1, 0)
+    globalHRPSize = math.floor(1 + (_0x4b * 19))
+    _0x42.Text = "Size: " .. tostring(globalHRPSize)
+  end
+end)
+
+task.spawn(function()
+  while true do
+    if hrpGlobalSliderUsed then
+      for _, player in ipairs(_0x1:GetPlayers()) do
+        if player ~= _0x9 then
+          local c = player.Character
+          local hrp = c and c:FindFirstChild("HumanoidRootPart")
+          if hrp then
+            hrp.Size = Vector3.new(globalHRPSize, globalHRPSize, globalHRPSize)
+            hrp.Transparency = 0.8
+            hrp.CanCollide = false
+          end
+        end
+      end
+      for _, npc in ipairs(workspace:GetDescendants()) do
+        if npc:IsA("Model") and npc:FindFirstChild("Humanoid") and npc ~= _0x9.Character then
+          local hrp = npc:FindFirstChild("HumanoidRootPart")
+          if hrp then
+            hrp.Size = Vector3.new(globalHRPSize, globalHRPSize, globalHRPSize)
+            hrp.Transparency = 0.8
+            hrp.CanCollide = false
+          end
+        end
+      end
+    end
+    task.wait(0.3)
+  end
+end)
+
+-- 6.5 Walkspeed Changer Container & Slider (Max 40)
+_0x24 = _0x24 + 1
+local _0xWS_Frame = Instance.new("Frame")
+_0xWS_Frame.Size = UDim2.new(0.9, 0, 0, 52)
+_0xWS_Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+_0xWS_Frame.BorderSizePixel = 0
+_0xWS_Frame.LayoutOrder = _0x24
+_0xWS_Frame.Parent = _0x21
+Instance.new("UICorner", _0xWS_Frame).CornerRadius = UDim.new(0, 8)
+Instance.new("UIStroke", _0xWS_Frame).Color = Color3.fromRGB(138, 43, 226)
+
+local _0xWS_ToggleBtn = Instance.new("TextButton")
+_0xWS_ToggleBtn.Size = UDim2.new(1, 0, 0, 24)
+_0xWS_ToggleBtn.BackgroundTransparency = 1
+_0xWS_ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0xWS_ToggleBtn.Text = "MOVEMENT SPEED ⚡: OFF"
+_0xWS_ToggleBtn.TextSize = 11
+_0xWS_ToggleBtn.Font = Enum.Font.SourceSansBold
+_0xWS_ToggleBtn.Parent = _0xWS_Frame
+
+local _0xWS_SliderBG = Instance.new("Frame")
+_0xWS_SliderBG.Size = UDim2.new(0.9, 0, 0, 16)
+_0xWS_SliderBG.Position = UDim2.new(0.05, 0, 0, 28)
+_0xWS_SliderBG.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
+_0xWS_SliderBG.BorderSizePixel = 0
+_0xWS_SliderBG.Parent = _0xWS_Frame
+Instance.new("UICorner", _0xWS_SliderBG).CornerRadius = UDim.new(0, 4)
+
+local _0xWS_SliderFill = Instance.new("Frame")
+_0xWS_SliderFill.Size = UDim2.new(0, 0, 1, 0)
+_0xWS_SliderFill.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+_0xWS_SliderFill.BorderSizePixel = 0
+_0xWS_SliderFill.Parent = _0xWS_SliderBG
+Instance.new("UICorner", _0xWS_SliderFill).CornerRadius = UDim.new(0, 4)
+
+local _0xWS_SliderText = Instance.new("TextLabel")
+_0xWS_SliderText.Size = UDim2.new(1, 0, 1, 0)
+_0xWS_SliderText.BackgroundTransparency = 1
+_0xWS_SliderText.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0xWS_SliderText.Text = "Speed: 16"
+_0xWS_SliderText.TextSize = 10
+_0xWS_SliderText.Font = Enum.Font.SourceSansBold
+_0xWS_SliderText.Parent = _0xWS_SliderBG
+
+local _0xWS_Active = false
+local _0xWS_Val = 16
+local _0xWS_Dragging = false
+local _0xWS_Connection = nil
+
+_0xWS_ToggleBtn.MouseButton1Click:Connect(function()
+  _0xWS_Active = not _0xWS_Active
+  if _0xWS_Active then
+    _0xWS_ToggleBtn.Text = "MOVEMENT SPEED ⚡: ON"
+    _0xWS_Frame.BackgroundColor3 = Color3.fromRGB(20, 80, 40)
+  else
+    _0xWS_ToggleBtn.Text = "MOVEMENT SPEED ⚡: OFF"
+    _0xWS_Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+  end
+
+  if _0xWS_Connection then
+    _0xWS_Connection:Disconnect()
+    _0xWS_Connection = nil
+  end
+
+  if _0xWS_Active then
+    _0xWS_Connection = _0x6.Heartbeat:Connect(function()
+      local character = _0x9.Character
+      local hrp = character and character:FindFirstChild("HumanoidRootPart")
+      local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+      if not character or character:GetAttribute("Ragdolled") or not hrp or not humanoid then return end
+      local move = humanoid.MoveDirection
+      if move.Magnitude <= 0 then return end
+      local velocity = hrp.AssemblyLinearVelocity
+      local horizontal = Vector3.new(velocity.X, 0, velocity.Z)
+      local targetSpeed = _0xWS_Val
+      if horizontal.Magnitude > targetSpeed then
+        horizontal = horizontal.Unit * targetSpeed
+        hrp.AssemblyLinearVelocity = Vector3.new(horizontal.X, velocity.Y, horizontal.Z)
+      else
+        local direction = Vector3.new(move.X, 0, move.Z).Unit
+        hrp.AssemblyLinearVelocity = Vector3.new(direction.X * targetSpeed, velocity.Y, direction.Z * targetSpeed)
+      end
+    end)
+  end
+end)
+
+_0xWS_SliderBG.InputBegan:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0xWS_Dragging = true
+  end
+end)
+
+_0x4.InputEnded:Connect(function(_0x1c)
+  if _0x1c.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c.UserInputType == Enum.UserInputType.Touch then
+    _0xWS_Dragging = false
+  end
+end)
+
+_0x4.InputChanged:Connect(function(_0x1c)
+  if _0xWS_Dragging and (_0x1c.UserInputType == Enum.UserInputType.MouseMovement or _0x1c.UserInputType == Enum.UserInputType.Touch) then
+    local posX = _0xWS_SliderBG.AbsolutePosition.X
+    local sizeX = _0xWS_SliderBG.AbsoluteSize.X
+    local mouseX = _0x1c.Position.X
+    local p = math.clamp((mouseX - posX) / sizeX, 0, 1)
+    
+    _0xWS_SliderFill.Size = UDim2.new(p, 0, 1, 0)
+    _0xWS_Val = math.floor(1 + (p * 39))
+    _0xWS_SliderText.Text = "Speed: " .. tostring(_0xWS_Val)
+  end
+end)
+
+-- 7. Staff Detection
+local _0x4c = _0x25("STAFF DETECTION 🛡️: OFF", Color3.fromRGB(120, 30, 30))
+local _0x4d = false
+_0x4c.MouseButton1Click:Connect(function()
+  _0x4d = not _0x4d
+  if _0x4d then
+    _0x4c.Text = "STAFF DETECTION 🛡️: ON"
+    _0x4c.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x4c.Text = "STAFF DETECTION 🛡️: OFF"
+    _0x4c.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 8. Anti Recorder
+local _0x4e = _0x25("ANTI RECORDER 📹: OFF", Color3.fromRGB(120, 30, 30))
+local _0x4f = false
+_0x4e.MouseButton1Click:Connect(function()
+  _0x4f = not _0x4f
+  if _0x4f then
+    _0x4e.Text = "ANTI RECORDER 📹: ON"
+    _0x4e.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x4e.Text = "ANTI RECORDER 📹: OFF"
+    _0x4e.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 9. Anti Spectator
+local _0x50 = _0x25("ANTI SPECTATOR 👁️‍🗨️: OFF", Color3.fromRGB(120, 30, 30))
+local _0x51 = false
+_0x50.MouseButton1Click:Connect(function()
+  _0x51 = not _0x51
+  if _0x51 then
+    _0x50.Text = "ANTI SPECTATOR 👁️‍🗨️: ON"
+    _0x50.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x50.Text = "ANTI SPECTATOR 👁️‍🗨️: OFF"
+    _0x50.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 10. TP to Lowest HP
+local _0x52 = _0x25("TP TO LOWEST HP ⚡", Color3.fromRGB(60, 30, 120))
+_0x52.MouseButton1Click:Connect(function()
+  pcall(function()
+    local _0x53 = _0x9.Character
+    if _0x53 and _0x53:FindFirstChild("HumanoidRootPart") then
+      local _0x54 = _0x53.HumanoidRootPart
+      local _0x55 = nil
+      local _0x56 = math.huge
+
+      for _, _0x45 in ipairs(_0x1:GetPlayers()) do
+        if _0x45 ~= _0x9 and _0x45.Character then
+          local _0x57 = _0x45.Character:FindFirstChildOfClass("Humanoid")
+          local _0x46 = _0x45.Character:FindFirstChild("HumanoidRootPart")
+          if _0x57 and _0x46 and _0x57.Health > 0 and _0x57.Health < _0x56 then
+            _0x56 = _0x57.Health
+            _0x55 = _0x45
+          end
+        end
+      end
+
+      if _0x55 and _0x55.Character and _0x55.Character:FindFirstChild("HumanoidRootPart") then
+        _0x54.CFrame = _0x55.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
+      end
+    end
+  end)
+end)
+
+-- 11. Anti Kill Brick
+local _0x58 = _0x25("ANTI KILL BRICK 🧱: OFF", Color3.fromRGB(120, 30, 30))
+local _0x59 = false
+local function _0x5a(_0x5b)
+  if _0x5b:IsA("BasePart") then
+    local _0x5c = _0x5b.Name:lower()
+    local _0x5d = _0x5b.Parent and _0x5b.Parent.Name:lower() or ""
+    if _0x5c:find("kill") or _0x5c:find("death") or _0x5c:find("damage") 
+      or _0x5c:find("void") or _0x5c:find("lava") or _0x5c:find("hazard") 
+      or _0x5c:find("trap") or _0x5c:find("spike") or _0x5d:find("kill") 
+      or _0x5d:find("death") or _0x5d:find("hazard") then
+      _0x5b.CanTouch = false
+      local _0x5e = _0x5b:FindFirstChild("TouchInterest")
+      if _0x5e then _0x5e:Destroy() end
+    end
+  end
+end
+_0x58.MouseButton1Click:Connect(function()
+  _0x59 = not _0x59
+  if _0x59 then
+    _0x58.Text = "ANTI KILL BRICK 🧱: ON"
+    _0x58.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+    pcall(function()
+      for _, _0x5f in ipairs(workspace:GetDescendants()) do _0x5a(_0x5f) end
+    end)
+  else
+    _0x58.Text = "ANTI KILL BRICK 🧱: OFF"
+    _0x58.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 12. Auto Win
+local _0x60 = _0x25("AUTO WIN 🏆: OFF", Color3.fromRGB(120, 30, 30))
+local _0x61 = false
+_0x60.MouseButton1Click:Connect(function()
+  _0x61 = not _0x61
+  if _0x61 then
+    _0x60.Text = "AUTO WIN 🏆: ON"
+    _0x60.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x60.Text = "AUTO WIN 🏆: OFF"
+    _0x60.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 13. Fast Speed
+local _0x62 = _0x25("FAST SPEED ⚡: OFF", Color3.fromRGB(120, 30, 30))
+local _0x63 = false
+local _0x64 = nil
+local function _0x65(_0x53)
+  if not _0x53 then return nil end
+  local _0x66 = _0x53:FindFirstChild("Right Leg") or _0x53:FindFirstChild("RightUpperLeg")
+  local _0x67 = _0x53:FindFirstChild("Torso") or _0x53:FindFirstChild("LowerTorso")
+  if _0x66 and _0x67 then
+    return _0x66:FindFirstChildOfClass("Motor6D") or _0x67:FindFirstChild("Right Hip") or _0x67:FindFirstChild("RightUpperHip") or _0x66:FindFirstChild("RightUpperHip")
+  end
+  return nil
+end
+_0x62.MouseButton1Click:Connect(function()
+  _0x63 = not _0x63
+  if _0x63 then
+    _0x62.Text = "FAST SPEED ⚡: ON"
+    _0x62.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x62.Text = "FAST SPEED ⚡: OFF"
+    _0x62.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+    local _0x53 = _0x9.Character
+    local _0x68 = _0x65(_0x53)
+    if _0x68 and _0x64 then
+      _0x68.C0 = _0x64
+      _0x64 = nil
+    end
+  end
+end)
+
+_0x6.Stepped:Connect(function()
+  if not _0x63 then return end
+  local _0x53 = _0x9.Character
+  if not _0x53 then return end
+  local _0x57 = _0x53:FindFirstChildOfClass("Humanoid")
+  if not _0x57 or _0x57.Health <= 0 then return end
+  local _0x68 = _0x65(_0x53)
+  if _0x68 then
+    if not _0x64 then _0x64 = _0x68.C0 end
+    _0x68.C0 = CFrame.new(30, -1, 0)
+  end
+end)
+
+_0x9.CharacterAdded:Connect(function()
+  _0x64 = nil
+  _0x63 = false
+  _0x62.Text = "FAST SPEED ⚡: OFF"
+  _0x62.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+end)
+
+-- 14. Tomahawk Aimbot
+local _0x69 = _0x25("TOMAHAWK AIMBOT 🎯: OFF", Color3.fromRGB(120, 30, 30))
+local _0x6a = false
+_0x69.MouseButton1Click:Connect(function()
+  _0x6a = not _0x6a
+  if _0x6a then
+    _0x69.Text = "TOMAHAWK AIMBOT 🎯: ON"
+    _0x69.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x69.Text = "TOMAHAWK AIMBOT 🎯: OFF"
+    _0x69.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 15. Anti Acid (Fixed)
+local _0x6b = _0x25("ANTI ACID 🧪: OFF", Color3.fromRGB(120, 30, 30))
+local _0x6c = false
+_0x6b.MouseButton1Click:Connect(function()
+  _0x6c = not _0x6c
+  _G.AntiAcid = _0x6c
+  if _0x6c then
+    _0x6b.Text = "ANTI ACID 🧪: ON"
+    _0x6b.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x6b.Text = "ANTI ACID 🧪: OFF"
+    _0x6b.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 16. Anti Lava
+local _0x6d = _0x25("ANTI LAVA 🌋: OFF", Color3.fromRGB(120, 30, 30))
+local _0x6e = false
+_0x6d.MouseButton1Click:Connect(function()
+  _0x6e = not _0x6e
+  _G.AntiLava = _0x6e
+  if _0x6e then
+    _0x6d.Text = "ANTI LAVA 🌋: ON"
+    _0x6d.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x6d.Text = "ANTI LAVA 🌋: OFF"
+    _0x6d.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 17. Anti Cube of Death
+local _0x6f = _0x25("ANTI CUBE OF DEATH 💀: OFF", Color3.fromRGB(120, 30, 30))
+local _0x70 = false
+_0x6f.MouseButton1Click:Connect(function()
+  _0x70 = not _0x70
+  if _0x70 then
+    _0x6f.Text = "ANTI CUBE OF DEATH 💀: ON"
+    _0x6f.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x6f.Text = "ANTI CUBE OF DEATH 💀: OFF"
+    _0x6f.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 18. Anti Knockback
+local _0x71 = _0x25("ANTI KNOCKBACK 🛡️: OFF", Color3.fromRGB(120, 30, 30))
+local _0x72 = false
+_0x71.MouseButton1Click:Connect(function()
+  _0x72 = not _0x72
+  if _0x72 then
+    _0x71.Text = "ANTI KNOCKBACK 🛡️: ON"
+    _0x71.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x71.Text = "ANTI KNOCKBACK 🛡️: OFF"
+    _0x71.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 19. Infinite Jump
+local _0x73 = _0x25("INFINITE JUMP 🦘: OFF", Color3.fromRGB(120, 30, 30))
+local _0x74 = false
+_0x73.MouseButton1Click:Connect(function()
+  _0x74 = not _0x74
+  if _0x74 then
+    _0x73.Text = "INFINITE JUMP 🦘: ON"
+    _0x73.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x73.Text = "INFINITE JUMP 🦘: OFF"
+    _0x73.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+_0x4.JumpRequest:Connect(function()
+  if _0x74 then
+    local _0x75 = _0x9.Character
+    local _0x57 = _0x75 and _0x75:FindFirstChildOfClass("Humanoid")
+    if _0x57 then _0x57:ChangeState(Enum.HumanoidStateType.Jumping) end
+  end
+end)
+
+-- 20. Speed Boost
+local _0x76 = _0x25("SPEED BOOST 💨: OFF", Color3.fromRGB(120, 30, 30))
+local _0x77 = false
+_0x76.MouseButton1Click:Connect(function()
+  _0x77 = not _0x77
+  if _0x77 then
+    _0x76.Text = "SPEED BOOST 💨: ON"
+    _0x76.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x76.Text = "SPEED BOOST 💨: OFF"
+    _0x76.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 21. Get All Items
+local _0x78 = _0x25("GET ALL ITEMS 📦: OFF", Color3.fromRGB(120, 30, 30))
+local _0x79 = false
+_0x78.MouseButton1Click:Connect(function()
+  _0x79 = not _0x79
+  if _0x79 then
+    _0x78.Text = "GET ALL ITEMS 📦: ON"
+    _0x78.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x78.Text = "GET ALL ITEMS 📦: OFF"
+    _0x78.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 22. Glove ESP
+local _0x7a = _0x25("GLOVE ESP 🥊: OFF", Color3.fromRGB(120, 30, 30))
+local _0x7b = false
+local function _0x7c(_0x45)
+	local _0x7d = _0x45:FindFirstChild("Glove") or (_0x45:FindFirstChild("leaderstats") and _0x45.leaderstats:FindFirstChild("Glove"))
+	if not _0x7d then return "Unknown" end
+	local _0x7e, _0x7f = pcall(function() return _0x7d.Value end)
+	if _0x7e and _0x7f ~= nil then return tostring(_0x7f) end
+	return "Unknown"
+end
+_0x7a.MouseButton1Click:Connect(function()
+	_0x7b = not _0x7b
+	if _0x7b then
+		_0x7a.Text = "GLOVE ESP 🥊: ON"
+		_0x7a.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+	else
+		_0x7a.Text = "GLOVE ESP 🥊: OFF"
+		_0x7a.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+		for _0x30, _0x31 in pairs(_0x2d) do
+			if _0x31 then _0x31:Destroy() end
+			_0x2d[_0x30] = nil
+		end
+	end
+end)
+
+-- 23. Early Bus Jump
+local _0x80 = _0x25("EARLY BUS JUMP 🚌: OFF", Color3.fromRGB(120, 30, 30))
+local _0x81 = false
+_0x80.MouseButton1Click:Connect(function()
+  _0x81 = not _0x81
+  if _0x81 then
+    _0x80.Text = "EARLY BUS JUMP 🚌: ON"
+    _0x80.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x80.Text = "EARLY BUS JUMP 🚌: OFF"
+    _0x80.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 24. Instant Landing
+local _0x82 = _0x25("INSTANT LANDING 🪂: OFF", Color3.fromRGB(120, 30, 30))
+local _0x83 = false
+_0x82.MouseButton1Click:Connect(function()
+  _0x83 = not _0x83
+  if _0x83 then
+    _0x82.Text = "INSTANT LANDING 🪂: ON"
+    _0x82.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x82.Text = "INSTANT LANDING 🪂: OFF"
+    _0x82.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 25. Remove Zone Effect
+local _0x84 = _0x25("REMOVE ZONE EFFECT 🌐: OFF", Color3.fromRGB(120, 30, 30))
+local _0x85 = false
+_0x84.MouseButton1Click:Connect(function()
+  _0x85 = not _0x85
+  if _0x85 then
+    _0x84.Text = "REMOVE ZONE EFFECT 🌐: ON"
+    _0x84.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x84.Text = "REMOVE ZONE EFFECT 🌐: OFF"
+    _0x84.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 26. Delete Seats
+local _0x86 = _0x25("DELETE ALL SEATS 🪑: OFF", Color3.fromRGB(120, 30, 30))
+local _0x87 = false
+_0x86.MouseButton1Click:Connect(function()
+  _0x87 = not _0x87
+  if _0x87 then
+    _0x86.Text = "DELETE ALL SEATS 🪑: ON"
+    _0x86.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x86.Text = "DELETE ALL SEATS 🪑: OFF"
+    _0x86.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 27. Auto Use Items
+local _0x88 = _0x25("AUTO USE ITEMS 🧪: OFF", Color3.fromRGB(120, 30, 30))
+local _0x89 = false
+_0x88.MouseButton1Click:Connect(function()
+  _0x89 = not _0x89
+  if _0x89 then
+    _0x88.Text = "AUTO USE ITEMS 🧪: ON"
+    _0x88.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x88.Text = "AUTO USE ITEMS 🧪: OFF"
+    _0x88.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 28. Auto Bomb Bus
+local _0x8a = _0x25("AUTO BOMB BUS 💣: OFF", Color3.fromRGB(120, 30, 30))
+local _0x8b = false
+_0x8a.MouseButton1Click:Connect(function()
+  _0x8b = not _0x8b
+  if _0x8b then
+    _0x8a.Text = "AUTO BOMB BUS 💣: ON"
+    _0x8a.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+  else
+    _0x8a.Text = "AUTO BOMB BUS 💣: OFF"
+    _0x8a.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 29. Go Under Map
+local _0x8c = _0x25("GO UNDER MAP 🗺️: OFF", Color3.fromRGB(120, 30, 30))
+local _0x8d = false
+_0x8c.MouseButton1Click:Connect(function()
+  _0x8d = not _0x8d
+  if _0x8d then
+    _0x8c.Text = "GO UNDER MAP 🗺️: ON"
+    _0x8c.BackgroundColor3 = Color3.fromRGB(30, 140, 60)
+    pcall(function()
+      local _0x46 = _0x9.Character and _0x9.Character:FindFirstChild("HumanoidRootPart")
+      if _0x46 then _0x46.CFrame = _0x46.CFrame + Vector3.new(0, -30, 0) end
+    end)
+  else
+    _0x8c.Text = "GO UNDER MAP 🗺️: OFF"
+    _0x8c.BackgroundColor3 = Color3.fromRGB(120, 30, 30)
+  end
+end)
+
+-- 30. Show Lab Code
+local _0x8e = _0x25("SHOW LAB CODE 🔢", Color3.fromRGB(60, 30, 120))
+_0x8e.MouseButton1Click:Connect(function()
+  pcall(function()
+    local codes = {
+      ["9648755440"] = "8", ["9648765536"] = "2", ["9648723237"] = "3", ["9648718450"] = "6",
+      ["9648769161"] = "4", ["9648730082"] = "6", ["9648734698"] = "2", ["9648712563"] = "2",
+      ["9648742013"] = "7", ["9648745618"] = "3", ["9648715920"] = "6", ["9648752438"] = "2",
+      ["9648749145"] = "8", ["9648759883"] = "9", ["9648738553"] = "8"
+    }
+    local map = workspace:FindFirstChild("Map")
+    local codeBrick = map and map:FindFirstChild("CodeBrick")
+    local surfaceGui = codeBrick and codeBrick:FindFirstChild("SurfaceGui")
+    if surfaceGui then
+      local templates = {}
+      for _, obj in ipairs(surfaceGui:GetChildren()) do
+        if obj.Name == "IMGTemplate" then table.insert(templates, obj) end
+      end
+      table.sort(templates, function(a, b)
+        local ax = a.AbsolutePosition.X
+        local bx = b.AbsolutePosition.X
+        if math.abs(ax - bx) > 1 then return ax < bx end
+        return a.AbsolutePosition.Y < b.AbsolutePosition.Y
+      end)
+      local result = {}
+      for i, imageObject in ipairs(templates) do
+        local image = tostring(imageObject.Image)
+        local assetId = image:match("[?&]id=(%d+)") or image:match("rbxassetid://(%d+)") or image:match("(%d+)$")
+        local digit = assetId and codes[assetId]
+        if digit then result[i] = digit end
+      end
+      local CodeEsp = table.concat(result)
+      print("Lab Code: " .. CodeEsp)
+    end
+  end)
+end)
+
+-- 31. Open Lab + Teleport
+local _0x98 = _0x25("OPEN LAB + TP 🚪", Color3.fromRGB(60, 30, 120))
+_0x98.MouseButton1Click:Connect(function()
+  pcall(function()
+    local codes = {
+      ["9648755440"] = "8", ["9648765536"] = "2", ["9648723237"] = "3", ["9648718450"] = "6",
+      ["9648769161"] = "4", ["9648730082"] = "6", ["9648734698"] = "2", ["9648712563"] = "2",
+      ["9648742013"] = "7", ["9648745618"] = "3", ["9648715920"] = "6", ["9648752438"] = "2",
+      ["9648749145"] = "8", ["9648759883"] = "9", ["9648738553"] = "8"
+    }
+    local map = workspace:FindFirstChild("Map")
+    if not map then return end
+    local codeBrick = map:FindFirstChild("CodeBrick")
+    local surfaceGui = codeBrick and codeBrick:FindFirstChild("SurfaceGui")
+    if not surfaceGui then return end
+    local templates = {}
+    for _, obj in ipairs(surfaceGui:GetChildren()) do
+      if obj.Name == "IMGTemplate" then table.insert(templates, obj) end
+    end
+    if #templates ~= 4 then return end
+    table.sort(templates, function(a, b)
+      local ax = a.AbsolutePosition.X
+      local bx = b.AbsolutePosition.X
+      if math.abs(ax - bx) > 1 then return ax < bx end
+      return a.AbsolutePosition.Y < b.AbsolutePosition.Y
+    end)
+    local result = {}
+    for i, imageObject in ipairs(templates) do
+      local image = tostring(imageObject.Image)
+      local assetId = image:match("[?&]id=(%d+)") or image:match("rbxassetid://(%d+)") or image:match("(%d+)$")
+      local digit = assetId and codes[assetId]
+      if not digit then return end
+      result[i] = digit
+    end
+    local CodeEsp = table.concat(result)
+
+    local originOffice = map:FindFirstChild("OriginOffice")
+    if not originOffice then return end
+    local codeDoor = originOffice:FindFirstChild("CodeDoor")
+    local door = codeDoor and codeDoor:FindFirstChild("Door")
+    if not door then return end
+    local doorPart = door:IsA("BasePart") and door or door:FindFirstChildWhichIsA("BasePart", true)
+    if not doorPart then return end
+
+    local character = _0x9.Character or _0x9.CharacterAdded:Wait()
+    local rootPart = character:FindFirstChild("HumanoidRootPart")
+    if not rootPart then return end
+
+    local leftOffset = -doorPart.CFrame.RightVector * 20
+    local targetPosition = doorPart.Position + leftOffset
+    local currentRotation = rootPart.CFrame - rootPart.CFrame.Position
+    rootPart.CFrame = CFrame.new(targetPosition) * currentRotation
+
+    local keypad = door:FindFirstChild("Keypad")
+    local buttonsFolder = keypad and keypad:FindFirstChild("Buttons")
+    if not buttonsFolder then return end
+
+    local resetButton = buttonsFolder:FindFirstChild("Reset")
+    local resetDetector = resetButton and resetButton:FindFirstChildOfClass("ClickDetector")
+    if resetDetector then
+      fireclickdetector(resetDetector)
+      task.wait(0.2)
+    end
+
+    for i = 1, #CodeEsp do
+      local digit = CodeEsp:sub(i, i)
+      local button = buttonsFolder:FindFirstChild(digit)
+      if button then
+        local clickDetector = button:FindFirstChildOfClass("ClickDetector")
+        if clickDetector then
+          fireclickdetector(clickDetector)
+          task.wait(0.15)
+        end
+      end
+    end
+
+    local enterButton = buttonsFolder:FindFirstChild("Enter")
+    local enterDetector = enterButton and enterButton:FindFirstChildOfClass("ClickDetector")
+    if enterDetector then
+      fireclickdetector(enterDetector)
+    end
+  end)
+end)
+
+-- 32. Lobby Hider
+local _0x9c = _0x25("LOBBY HIDER 🏢", Color3.fromRGB(60, 30, 120))
+_0x9c.MouseButton1Click:Connect(function()
+  pcall(function()
+    local _0x46 = _0x9.Character and _0x9.Character:FindFirstChild("HumanoidRootPart")
+    local _0x9d = workspace:FindFirstChild("Lobby") and workspace.Lobby:FindFirstChild("Ceiling")
+    if _0x46 and _0x9d then
+      _0x46.CFrame = CFrame.new(_0x9d.Position + Vector3.new(0, 50, 0), _0x46.Position + _0x46.CFrame.LookVector)
+    end
+  end)
+end)
+
+-- Discord Label
+_0x24 = _0x24 + 1
+local _0x9e = Instance.new("TextLabel")
+_0x9e.Size = UDim2.new(0.9, 0, 0, 25)
+_0x9e.BackgroundTransparency = 1
+_0x9e.TextColor3 = Color3.fromRGB(120, 180, 255)
+_0x9e.Text = "Discord: https://discord.gg/A4zeEv2rF"
+_0x9e.TextSize = 9.5
+_0x9e.Font = Enum.Font.SourceSansItalic
+_0x9e.LayoutOrder = _0x24
+_0x9e.Parent = _0x21
+
+-- Auto Collect Loop Logic
+task.spawn(function()
+  local _0x9f = _0x2:WaitForChild("Remotes"):WaitForChild("Item")
+
+  while true do
+    task.wait(1)
+
+    if _0x3d then
+      pcall(function()
+        local _0x53 = _0x9.Character
+
+        if _0x53 and _0x53:FindFirstChild("HumanoidRootPart") then
+          local _0x46 = _0x53.HumanoidRootPart
+          local _0xa0 = _0x36.Text:gsub("SELECT: ", ""):gsub(" ▾", ""):lower()
+
+          for _, _0xa1 in ipairs(workspace:GetDescendants()) do
+            if not _0x3d then break end
+
+            if _0xa1.Name:lower() == _0xa0 or _0xa1.Name:lower():find(_0xa0:gsub("'", "")) then
+              local _0xa2 = (_0xa1.Name .. " " .. (_0xa1.Parent and _0xa1.Parent.Name or "")):lower()
+
+              if not (_0xa2:find("shop") or _0xa2:find("stand") or _0xa2:find("vendor")
+                or _0xa2:find("store") or _0xa2:find("pedestal")) then
+                local _0xa3 = nil
+
+                if _0xa1:IsA("Model") then
+                  _0xa3 = _0xa1.PrimaryPart or _0xa1:FindFirstChildWhichIsA("BasePart")
+                elseif _0xa1:IsA("BasePart") then
+                  _0xa3 = _0xa1
+                end
+
+                if _0xa3 then
+                  _0x46.CFrame = _0xa3.CFrame + Vector3.new(0, 3, 0)
+                  task.wait(0.3)
+                  local _0xa4 = _0xa3:GetAttribute("ItemId") or (_0xa3.Parent and _0xa3.Parent:GetAttribute("ItemId"))
+                  if _0xa4 then
+                    pcall(function() _0x9f:FireServer(_0xa4) end)
+                  end
+                  _0x5:SendKeyEvent(true, Enum.KeyCode.F, false, game)
+                  local _0xa5 = tick()
+
+                  while tick() - _0xa5 < 3 do
+                    if not _0x3d then break end
+                    task.wait(0.1)
+                  end
+
+                  _0x5:SendKeyEvent(false, Enum.KeyCode.F, false, game)
+                  task.wait(0.5)
+                  break
+                end
+              end
+            end
+          end
+        end
+      end)
+    end
+  end
+end)
+
+-- Safe Background loops
+task.spawn(function()
+  while true do
+    if _0x6c or _G.AntiAcid then
+      local whitelist = {
+        ["Colliders"] = true,
+        ["Effects"] = true,
+        ["IgnoreList"] = true,
+        ["InteractableEvents"] = true,
+        ["Items"] = true,
+        ["Map"] = true,
+        ["MapBounds"] = true,
+        ["Rubbled Remains"] = true,
+        ["Shipments"] = true,
+        ["Lobby"] = true,
+        ["SoundRegions"] = true
+      }
+
+      for _, _0x5f in ipairs(workspace:GetChildren()) do
+        if _0x5f:IsA("Folder") and not whitelist[_0x5f.Name] then
+          for _, _0xa6 in ipairs(_0x5f:GetChildren()) do
+            _0xa6:Destroy()
+          end
+          _0x5f:Destroy()
+        end
+      end
+    end
+
+    if _0x6e or _G.AntiLava then
+      for _, _0x5f in ipairs(workspace:GetDescendants()) do
+        if _0x5f:IsA("BasePart") and _0x5f.Name == "Lava" then _0x5f:Destroy() end
+      end
+    end
+
+    if _0x72 or _G.AntiKnockback then
+      local _0x75 = _0x9.Character
+      local _0x57 = _0x75 and _0x75:FindFirstChild("Humanoid")
+      local _0x46 = _0x75 and _0x75:FindFirstChild("HumanoidRootPart")
+
+      if _0x57 and _0x46 then
+        if _0x57.PlatformStand == true then
+          if not workspace:FindFirstChild("AntiKB_Cage_".._0x75.Name) then
+            local _0xa6 = Instance.new("Folder")
+            _0xa6.Name = "AntiKB_Cage_".._0x75.Name
+            _0xa6.Parent = workspace
+            local function _0xa7(_0x1, _0x2, _0x3)
+              local _0x4 = Instance.new("Part")
+              _0x4.Name = _0x1
+              _0x4.Size = _0x2
+              _0x4.Anchored = true
+              _0x4.CanCollide = true
+              _0x4.Transparency = 1
+              _0x4.Position = _0x46.Position + _0x3
+              _0x4.Parent = _0xa6
+            end
+            _0xa7("Top", Vector3.new(6,1,6), Vector3.new(0,3,0))
+            _0xa7("Bottom", Vector3.new(6,1,6), Vector3.new(0,-3,0))
+            _0xa7("Front", Vector3.new(6,6,1), Vector3.new(0,0,-3))
+            _0xa7("Back", Vector3.new(6,6,1), Vector3.new(0,0,3))
+            _0xa7("Left", Vector3.new(1,6,6), Vector3.new(-3,0,0))
+            _0xa7("Right", Vector3.new(1,6,6), Vector3.new(3,0,0))
+          else
+            local _0xa6 = workspace["AntiKB_Cage_".._0x75.Name]
+            for _, _0x4 in ipairs(_0xa6:GetChildren()) do
+              if _0x4:IsA("Part") then
+                if _0x4.Name == "Top" then _0x4.Position = _0x46.Position + Vector3.new(0,5,0) end
+                if _0x4.Name == "Bottom" then _0x4.Position = _0x46.Position + Vector3.new(0,-5,0) end
+                if _0x4.Name == "Front" then _0x4.Position = _0x46.Position + Vector3.new(0,0,-5) end
+                if _0x4.Name == "Back" then _0x4.Position = _0x46.Position + Vector3.new(0,0,5) end
+                if _0x4.Name == "Left" then _0x4.Position = _0x46.Position + Vector3.new(-5,0,0) end
+                if _0x4.Name == "Right" then _0x4.Position = _0x46.Position + Vector3.new(5,0,0) end
+              end
+            end
+          end
+        else
+          local _0xa6 = workspace:FindFirstChild("AntiKB_Cage_".._0x75.Name)
+          if _0xa6 then _0xa6:Destroy() end
+        end
+      end
+    end
+
+    if _0x77 then
+      local _0x75 = _0x9.Character
+      local _0x57 = _0x75 and _0x75:FindFirstChild("Humanoid")
+      local _0x46 = _0x75 and _0x75:FindFirstChild("HumanoidRootPart")
+      if _0x57 and _0x46 then
+        local _0xa8 = _0x57.MoveDirection
+        if _0xa8.Magnitude > 0 then _0x46.CFrame = _0x46.CFrame + (_0xa8 * 0.5) end
+      end
+    end
+
+    if _0x85 then
+      for _, _0x5f in ipairs(game:GetDescendants()) do
+        if _0x5f.Name == "ZoneEffects" then _0x5f:Destroy() end
+      end
+    end
+
+    if _0x87 then
+      for _, _0x5f in ipairs(game:GetDescendants()) do
+        if _0x5f:IsA("Seat") or _0x5f:IsA("VehicleSeat") then _0x5f:Destroy() end
+      end
+    end
+
+    task.wait(0.1)
+  end
+end)
+
+task.spawn(function()
+  while true do
+    if _0x89 then
+      for _, _0xa9 in ipairs(_0x9.Backpack:GetChildren()) do
+        local _0xaa = {
+          ["Speed Potion"] = true, ["Potion of Strength"] = true, ["Bull's essence"] = true,
+          ["Frog Potion"] = true, ["Speed Brew"] = true, ["Frog Brew"] = true,
+          ["Strength Brew"] = true, ["Boba"] = true
+        }
+        if _0xaa[_0xa9.Name] then
+          _0xa9.Parent = _0x9.Character
+          task.wait(0.5)
+          pcall(function() _0xa9:Activate() end)
+        end
+      end
+    end
+    task.wait(0.1)
+  end
+end)
+
+task.spawn(function()
+  local function _0_GetCountdown()
+    local _0_cd = _0x9.PlayerGui:FindFirstChild("Countdown")
+    local _0_con = _0_cd and _0_cd:FindFirstChild("Countdown")
+    local _0_t = _0_con and _0_con:FindFirstChild("TimeLeft")
+    if not _0_t then return nil end
+    return tonumber(_0_t.Text)
+  end
+
+  while true do
+    if _0x8b then
+      local _0xab = _0x9.Character and _0x9.Character:FindFirstChild("Head")
+      if _0xab and _0xab.Transparency == 1 then
+        task.wait(10.3)
+        while _0x8b do
+          local val = _0_GetCountdown()
+          if val and val <= 3 then
+            break
+          end
+          task.wait(0.1)
+        end
+        local _0xac = _0x9.Character:FindFirstChild("Bomb") or _0x9.Backpack:FindFirstChild("Bomb")
+        if _0xac then
+          _0xac.Parent = _0x9.Character
+          pcall(function() _0xac:Activate() end)
+        end
+      end
+    end
+    task.wait(0.05)
+  end
+end)
+
+local function _0xad(_0x45)
+  _0x45.Chatted:Connect(function(_0xae)
+    if _0x4f then
+      local _0xaf = _0xae:lower()
+      if _0xaf:find("record") or _0xaf:find("recording") or _0xaf:find("clip") or _0xaf:find("video") then
+        _0x9:Kick("[ANTI-RECORDER]\n" .. _0x45.Name .. " mentioned recording: \"" .. _0xae .. "\"")
+      end
+    end
+  end)
+end
+
+for _, _0xb0 in ipairs(_0x1:GetPlayers()) do _0xad(_0xb0) end
+_0x1.PlayerAdded:Connect(_0xad)
+
+task.spawn(function()
+  while task.wait() do
+    if _0x4d then
+      for _, _0xb1 in ipairs(_0x1:GetPlayers()) do
+        pcall(function()
+          if _0xb1:GetRankInGroup(9950771) > 1 then
+            _0x9:Kick("[STAFF DETECTION]\n" .. _0xb1.Name .. " was in your server.")
+          end
+        end)
+      end
+    end
+  end
+end)
+
+local _0xb2 = {
+    ["Bull's Essence"]      = Color3.fromRGB(139, 69, 19),
+    ["Potion of Strength"]  = Color3.fromRGB(160, 32, 240),
+    ["True Power"]          = Color3.fromRGB(255, 255, 255),
+    ["Frog Potion"]         = Color3.fromRGB(30, 144, 255),
+    ["Speed Potion"]        = Color3.fromRGB(255, 255, 0),
+    ["Boba"]                = Color3.fromRGB(255, 255, 150),
+    ["Apple"]               = Color3.fromRGB(50, 205, 50),
+    ["Bandage"]             = Color3.fromRGB(0, 255, 255),
+    ["First Aid Kit"]       = Color3.fromRGB(160, 32, 240),
+    ["Forcefield Crystal"]  = Color3.fromRGB(0, 255, 255),
+    ["Force Field Crystal"] = Color3.fromRGB(0, 255, 255),
+    ["Healing Potion"]      = Color3.fromRGB(255, 50, 50),
+    ["Tomahawk"]            = Color3.fromRGB(255, 50, 50),
+    ["Cube of Ice"]         = Color3.fromRGB(0, 255, 255),
+    ["Bomb"]                = Color3.fromRGB(255, 140, 0),
+    ["Gravitation Shard"]   = Color3.fromRGB(100, 0, 150),
+    ["Sphere of Fury"]      = Color3.fromRGB(255, 100, 150),
+    ["Medkit"]              = Color3.fromRGB(255, 0, 0),
+    ["Lightning Potion"]    = Color3.fromRGB(255, 255, 100),
+    ["Strength Potion"]     = Color3.fromRGB(200, 50, 200)
+}
+
+_0x6.RenderStepped:Connect(function()
+    if _0x2f then
+        for _, _0x45 in ipairs(_0x1:GetPlayers()) do
+            if _0x45 ~= _0x9 and _0x45.Character and _0x45.Character.Parent then
+                local _0x53 = _0x45.Character
+                local _0xab = _0x53:FindFirstChild("Head")
+                local _0x57 = _0x53:FindFirstChildOfClass("Humanoid")
+
+                if _0xab and _0x57 and _0x57.Health > 0 then
+                    local _0xb3 = _0x2b[_0x45]
+                    if not _0xb3 or not _0xb3.Parent then
+                        _0xb3 = Instance.new("BillboardGui")
+                        _0xb3.Name = "PlayerESP_Gui"
+                        _0xb3.Size = UDim2.new(0, 160, 0, 45)
+                        _0xb3.StudsOffset = Vector3.new(0, 2.5, 0)
+                        _0xb3.AlwaysOnTop = true
+                        _0xb3.Parent = _0xab
+
+                        local _0xb4 = Instance.new("TextLabel")
+                        _0xb4.Name = "ESPLabel"
+                        _0xb4.Size = UDim2.new(1, 0, 1, 0)
+                        _0xb4.BackgroundTransparency = 1
+                        _0xb4.TextColor3 = Color3.fromRGB(255, 255, 255)
+                        _0xb4.TextStrokeTransparency = 0.2
+                        _0xb4.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+                        _0xb4.TextSize = 11
+                        _0xb4.Font = Enum.Font.SourceSansBold
+                        _0xb4.Parent = _0xb3
+
+                        _0x2b[_0x45] = _0xb3
+                    end
+
+                    local _0xb5 = _0xb3:FindFirstChild("ESPLabel")
+                    if _0xb5 then
+                        local _0xb6 = math.floor(_0x57.Health + 0.5)
+                        local _0xb7 = math.floor(_0x57.MaxHealth + 0.5)
+                        local _0xb8 = math.floor(_0x57.WalkSpeed + 0.5)
+                        local _0xb9 = math.floor(_0x57.JumpPower > 0 and _0x57.JumpPower or _0x57.JumpHeight + 0.5)
+
+                        _0xb5.Text = string.format("%s\nHP: %d/%d | Spd: %d | Jump: %d", _0x45.Name, _0xb6, _0xb7, _0xb8, _0xb9)
+                    end
+                else
+                    if _0x2b[_0x45] then
+                        _0x2b[_0x45]:Destroy()
+                        _0x2b[_0x45] = nil
+                    end
+                end
+            else
+                if _0x2b[_0x45] then
+                    _0x2b[_0x45]:Destroy()
+                    _0x2b[_0x45] = nil
+                end
+            end
+        end
+    end
+
+    if _0x33 then
+        local _0xba = workspace:FindFirstChild("Items")
+        if _0xba then
+            for _, _0xbb in ipairs(_0xba:GetChildren()) do
+                local _0xbc = _0xbb:IsA("BasePart") and _0xbb or (_0xbb:IsA("Model") and (_0xbb.PrimaryPart or _0xbb:FindFirstChildWhichIsA("BasePart")))
+                if _0xbc then
+                    local _0xb3 = _0x2c[_0xbb]
+                    if not _0xb3 or not _0xb3.Parent then
+                        _0xb3 = Instance.new("BillboardGui")
+                        _0xb3.Name = "ItemESP_Gui"
+                        _0xb3.Size = UDim2.new(0, 140, 0, 30)
+                        _0xb3.StudsOffset = Vector3.new(0, 1.5, 0)
+                        _0xb3.AlwaysOnTop = true
+                        _0xb3.Parent = _0xbc
+
+                        local _0xb4 = Instance.new("TextLabel")
+                        _0xb4.Name = "ItemLabel"
+                        _0xb4.Size = UDim2.new(1, 0, 1, 0)
+                        _0xb4.BackgroundTransparency = 1
+                        _0xb4.TextStrokeTransparency = 0.2
+                        _0xb4.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+                        _0xb4.TextSize = 12
+                        _0xb4.Font = Enum.Font.SourceSansBold
+                        _0xb4.Text = _0xbb.Name
+                        _0xb4.TextColor3 = _0xb2[_0xbb.Name] or Color3.fromRGB(255, 255, 0)
+                        _0xb4.Parent = _0xb3
+
+                        _0x2c[_0xbb] = _0xb3
+                    end
+                end
+            end
+        end
+    end
+
+    if _0x7b then
+        for _, _0x45 in ipairs(_0x1:GetPlayers()) do
+            if _0x45 ~= _0x9 and _0x45.Character and _0x45.Character.Parent then
+                local _0x53 = _0x45.Character
+                local _0xab = _0x53:FindFirstChild("Head")
+                local _0x57 = _0x53:FindFirstChildOfClass("Humanoid")
+
+                if _0xab and _0x57 and _0x57.Health > 0 then
+                    local _0xb3 = _0x2d[_0x45]
+                    if not _0xb3 or not _0xb3.Parent then
+                        _0xb3 = Instance.new("BillboardGui")
+                        _0xb3.Name = "GloveESP_Gui"
+                        _0xb3.Size = UDim2.new(0, 160, 0, 25)
+                        _0xb3.StudsOffset = Vector3.new(0, 4.0, 0)
+                        _0xb3.AlwaysOnTop = true
+                        _0xb3.Parent = _0xab
+
+                        local _0xb4 = Instance.new("TextLabel")
+                        _0xb4.Name = "GloveLabel"
+                        _0xb4.Size = UDim2.new(1, 0, 1, 0)
+                        _0xb4.BackgroundTransparency = 1
+                        _0xb4.TextColor3 = Color3.fromRGB(255, 220, 80)
+                        _0xb4.TextStrokeTransparency = 0.2
+                        _0xb4.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+                        _0xb4.TextSize = 11
+                        _0xb4.Font = Enum.Font.SourceSansBold
+                        _0xb4.Parent = _0xb3
+
+                        _0x2d[_0x45] = _0xb3
+                    end
+
+                    local _0xb5 = _0xb3:FindFirstChild("GloveLabel")
+                    if _0xb5 then
+                        _0xb5.Text = "Glove: " .. _0x7c(_0x45)
+                    end
+                else
+                    if _0x2d[_0x45] then
+                        _0x2d[_0x45]:Destroy()
+                        _0x2d[_0x45] = nil
+                    end
+                end
+            else
+                if _0x2d[_0x45] then
+                    _0x2d[_0x45]:Destroy()
+                    _0x2d[_0x45] = nil
+                end
+            end
+        end
+    end
+end)
+
+local function _0xbd(_0xbe)
+  return _0xbe:FindFirstChild("Right Arm") or _0xbe:FindFirstChild("RightHand")
+    or _0xbe:FindFirstChild("HumanoidRootPart") or _0xbe:FindFirstChild("Torso")
+    or _0xbe:FindFirstChild("UpperTorso")
+end
+
+local _0xSA1sCooldowns = {}
+
+task.spawn(function()
+  local _0xc0 = _0x2:WaitForChild("Remotes"):WaitForChild("Slap")
+
+  while true do
+    task.wait(0.05)
+
+    pcall(function()
+      -- New 1s Slap Aura (0 Hitboxes - relies on native/expanded target checking without expanding root size itself)
+      if _0xSA1sActive or _0x61 then
+        local _0xc1 = _0x9.Character
+
+        if _0xc1 and _0xc1:FindFirstChild("HumanoidRootPart") then
+          local _0x46 = _0xc1.HumanoidRootPart
+
+          for _, _0x45 in ipairs(_0x1:GetPlayers()) do
+            if _0x45 ~= _0x9 and _0x45.Character then
+              local _0x53 = _0x45.Character
+              local _0xc2 = _0x53:FindFirstChild("HumanoidRootPart")
+              local _0x57 = _0x53:FindFirstChildOfClass("Humanoid")
+
+              if _0xc2 and _0x57 and _0x57.Health > 0 then
+                local _0xc3 = (_0xc2.Position - _0x46.Position).Magnitude
+                local _0xc4 = _0x61 and 11 or 25
+
+                if _0xc3 <= _0xc4 then
+                  local _0xa5 = tick()
+                  local _0xc5 = _0xSA1sCooldowns[_0x45] or 0
+
+                  if _0xa5 - _0xc5 >= 1.0 then
+                    _0xSA1sCooldowns[_0x45] = _0xa5
+                    local _0xc6 = _0xbd(_0x53)
+
+                    if _0xc6 then
+                      _0xc0:FireServer(_0xc6)
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end)
+  end
+end)
